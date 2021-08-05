@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>patients</title>
+        <link rel="stylesheet" href="./newcss.css"></link>
+    </h:head>
+    <h:body>
+        <div class="bed-container">
+        <div class="left-container">
+            <div class="nurse">
+                <h1>Doctors</h1>
+            </div>
+            <div class="doctor">
+                <h1>Vaccines</h1>
+            </div>
+            <div class="billings">
+                <h1>PCR</h1>
+            </div>
+            <div class="appoinments">
+                <h1>Hospital</h1>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="top-head">
+                <h1>Vaccines</h1>
+            </div>
+            <div class="right-top">
+                <div class="name-content">
+                    <h2>First dose</h2>
+                    <h1>#{emrController.first}</h1>
+                    <h:form>
+                        <h:commandButton class="first-add" value="add" action="#{emrController.firstAdd()}"></h:commandButton>
+                    </h:form>
+                </div>
+                <div class="position-content">
+                    <h2>second does</h2>
+                    <h1>#{emrController.second}</h1>
+                    <h:form>
+                        <h:commandButton class="second-add" value="add" action="#{emrController.secondAdd()}"></h:commandButton>
+                    </h:form>
+                </div>
+                <div class="contact-content">
+                    <h2>Who could not be vaccinated</h2>
+                    <h1>#{emrController.notvac}</h1>
+                    <div class="not-group">
+                        <h:form>
+                            <h:commandButton class="not-add" value="add" action="#{emrController.notAdd()}"></h:commandButton>
+                            <h:commandButton class="not-remove" value="Remove" action="#{emrController.notremove()}"></h:commandButton>
+                        </h:form>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="details">
+                    <div class="row">
+                        <h2>Available vaccines for first dose = #{emrController.availableone}</h2>
+                    </div>
+                    <div class="row">
+                        <h2>Available vaccines for first dose = #{emrController.availabletwo}</h2>
+                    </div>
+                    <div class="row">
+                        <h2>Available vaccines for first dose</h2>
+                    </div>
+                    <div class="done-details">
+                        <div class="done-first">
+                            <h3>vaccinated first does</h3>
+                            <h1>#{emrController.first}</h1>
+                        </div>
+                        <div class="done-second">
+                            <h3>vaccinated second does</h3>
+                            <h1>#{emrController.second}</h1>
+                        </div>
+                        <div class="not-vac">
+                            <h3>Not be vaccinated</h3>
+                            <h1>#{emrController.notvac}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </h:body>
+</html>
+
